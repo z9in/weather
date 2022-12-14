@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weatherMap</title>
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="map">
+            <table>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td data-itemtype="paju" class="pointer">6</td>
+                <td data-itemtype="paju" class="pointer">7</td>
+                <td data-itemtype="paju" class="pointer">8</td>
+                <td data-itemtype="paju" class="pointer">9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td data-itemtype="yangju" class="pointer">11</td>
+                <td data-itemtype="yangju" class="pointer">12</td>
+                <td data-itemtype="yangju" class="pointer">13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td data-itemtype="gapyeong" class="pointer">20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td data-itemtype="yangju" class="pointer">11</td>
+                <td data-itemtype="yangju" class="pointer">12</td>
+                <td data-itemtype="yangju" class="pointer">13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td data-itemtype="gimpo-si" class="pointer">3</td>
+                <td data-itemtype="gimpo-si" class="pointer">4</td>
+                <td data-itemtype="gimpo-si" class="pointer">5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td data-itemtype="uijeongbu-si" class="pointer">12</td>
+                <td data-itemtype="uijeongbu-si" class="pointer">13</td>
+                <td data-itemtype="uijeongbu-si" class="pointer">14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td data-itemtype="goyang-si" class="pointer">8</td>
+                <td data-itemtype="goyang-si" class="pointer">9</td>
+                <td data-itemtype="goyang-si" class="pointer">10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td data-itemtype="namyangju" class="pointer">16</td>
+                <td data-itemtype="namyangju" class="pointer">17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td data-itemtype="guri-si" class="pointer">14</td>
+                <td data-itemtype="guri-si" class="pointer">15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td data-itemtype="seoul" class="pointer">10</td>
+                <td data-itemtype="seoul" class="pointer">11</td>
+                <td data-itemtype="seoul" class="pointer">12</td>
+                <td data-itemtype="seoul" class="pointer">13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td data-itemtype="bucheon" class="pointer">7</td>
+                <td data-itemtype="bucheon" class="pointer">8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td data-itemtype="hanam" class="pointer">15</td>
+                <td data-itemtype="hanam" class="pointer">16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td data-itemtype="incheon" class="pointer">5</td>
+                <td data-itemtype="incheon" class="pointer">6</td>
+                <td data-itemtype="incheon" class="pointer">7</td>
+                <td>8</td>
+                <td data-itemtype="incheon" class="pointer">9</td>
+                <td data-itemtype="incheon" class="pointer">10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td data-itemtype="siheung-si" class="pointer">6</td>
+                <td data-itemtype="siheung-si" class="pointer">7</td>
+                <td data-itemtype="siheung-si" class="pointer">8</td>
+                <td>9</td>
+                <td data-itemtype="anyang-si" class="pointer">10</td>
+                <td data-itemtype="anyang-si" class="pointer">11</td>
+                <td>12</td>
+                <td data-itemtype="seongnam-si" class="pointer">13</td>
+                <td data-itemtype="seongnam-si" class="pointer">14</td>
+                <td data-itemtype="seongnam-si" class="pointer">15</td>
+                <td>16</td>
+                <td data-itemtype="gwangju-si" class="pointer">17</td>
+                <td data-itemtype="gwangju-si" class="pointer">18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td data-itemtype="siheung-si" class="pointer">6</td>
+                <td data-itemtype="siheung-si" class="pointer">7</td>
+                <td data-itemtype="siheung-si" class="pointer">8</td>
+                <td>9</td>
+                <td data-itemtype="anyang-si" class="pointer">10</td>
+                <td data-itemtype="anyang-si" class="pointer">11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td data-itemtype="gunpo" class="pointer">10</td>
+                <td data-itemtype="gunpo" class="pointer">11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td data-itemtype="suwon-si" class="pointer">11</td>
+                <td data-itemtype="suwon-si" class="pointer">12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td data-itemtype="ansan-si" class="pointer">4</td>
+                <td data-itemtype="ansan-si" class="pointer">5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td data-itemtype="yongin-si" class="pointer">16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td data-itemtype="osan" class="pointer">12</td>
+                <td data-itemtype="osan" class="pointer">13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td data-itemtype="hwaseong-si" class="pointer">7</td>
+                <td data-itemtype="hwaseong-si" class="pointer">8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td data-itemtype="osan" class="pointer">12</td>
+                <td data-itemtype="osan" class="pointer">13</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td data-itemtype="anseong-si" class="pointer">17</td>
+                <td data-itemtype="anseong-si" class="pointer">18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+               <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td data-itemtype="pyeongtaek-si" class="pointer">11</td>
+                <td data-itemtype="pyeongtaek-si" class="pointer">12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td data-itemtype="anseong-si" class="pointer">17</td>
+                <td data-itemtype="anseong-si" class="pointer">18</td>
+                <td>19</td>
+                <td>20</td>
+               </tr>
+            </table>
+        </div>
+        <div class="weather_box">
+            <h1>오늘의 날씨</h1>
+            <div class="weather">
+                <ul>
+                    <li>
+                        <p>날짜</p>
+                    </li>
+                    <li>
+                        <p>시간</p>
+                    </li>
+                    <li>
+                        <p>장소</p>
+                    </li>
+                    <li>
+                        <p>온도</p>
+                    </li>
+                    <li>
+                        <p>날씨</p>
+                    </li>
+                    <li class="imgBox">
+                       
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./src/main.js"></script>
+    <script src="./src/app.js"></script>
+</body>
+</html>

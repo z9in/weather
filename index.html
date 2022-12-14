@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날씨 api</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+    </style>
+
+</head>
+<body>
+    
+    
+    <script>
+        let bodyEl = document.querySelector('body');
+        
+        let divEl = document.createElement('div');
+        let h1El = document.createElement('h1');
+        let divEl2 = document.createElement('div');
+        h1El.innerHTML='오늘의 날씨'
+        bodyEl.append(divEl);
+        divEl.append(h1El);
+        divEl2.innerHTML=`
+            <ul>
+                <li><p>날짜</p></li>
+                <li><p>시간</p></li>
+                <li><p>지역</p></li>
+                <li><p>지역</p></li>
+                <li><p>지역</p></li>
+                <li>지역</li>
+            </ul>
+        `
+        divEl.append(divEl2);
+        bodyEl.setAttribute('style', 'background-color:lightblue');
+        divEl.setAttribute('style', 'width:400px; height:650px; border: 2px solid white; border-radius: 30px; margin:200px auto; text-align:center; background-color:rgba(0,0,0,0.1); box-shadow:3px 1px 10px white;');
+        h1El.setAttribute('style', 'text-align:center; font-size:3.5em; margin:0; margin-top:30px; margin-bottom:30px;')
+        
+        let ulEl = document.getElementsByTagName('ul')[0];
+        let liEl = document.querySelectorAll("li");
+        let pEl = document.querySelectorAll('p');
+        ulEl.setAttribute('style', 'list-style-type: none; display:flex; flex-wrap:wrap; box-sizing:border-box; margin:0; padding:0;');
+        liEl[0].setAttribute('style','font-size:2em; margin-bottom:0px; margin-top:10px; width:100%;  text-align:center; padding:0;');
+        liEl[1].setAttribute('style','width:100%; font-size:2em;  padding:0; text-align:center;');
+        for(i=2;i<liEl.length;i++){
+            liEl[i].setAttribute('style','font-size:2.5em; width:50%; height:25%;  text-align:center;');
+        }        
+        setInterval(function(){
+            let date = new Date();
+            pEl[0].innerHTML=`${date.getFullYear()}년 ${date.getMonth()+1}월 ${date.getDate()}일`
+            pEl[1].innerHTML=`${date.getHours()}시 ${date.getMinutes()}분`
+        });
+        
+        const api_key = '132c4819a3edd9d062256ad974f08b29'
+        let city = 'anyang-si'
+        console.log(city);
+        const apiCall =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}&lang=kr`
+
+        fetch(apiCall).then(function(res){
+           return res.json();
+        }).then(function(data){
+            return weatherApp(data);
+        })
+
+        function weatherApp(data) {
+            console.log(data);
+            let weather = data.weather[0];
+            console.log(weather);
+            let weather1;
+            if(weather.main=="Clear"||weather.main=="Clouds"||weather.main=="Rain"||weather.main=="Snow"||weather.main=="Thunderstorm"||weather.main=="drizzle") {
+                weather1=weather.main;
+            }else {
+                weather1 = 'etc';
+            }
+            console.log(weather1);
+            pEl[2].innerHTML =data.name
+            pEl[4].innerHTML = weather.main;
+            pEl[3].innerHTML = `${Math.floor((data.main.temp-273.15)*10)/10}&deg;C`; 
+            liEl[5].innerHTML =`<img src="./images/${weather1}.svg" width="190px" height="122px"/>`
+        };
+
+    </script>
+
+
+
+
+</body>
+</html>
